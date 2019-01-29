@@ -1,0 +1,161 @@
+[01/28/19, 13:56:04:180] info: ╔═══════════════════════════════════════════════════════════════════════════════╗
+[01/28/19, 13:56:04:180] info: ║      Slack 3.3.7, darwin (Store) 17.7.0 on x64 at 01/28/19, 13:56:04:178      ║
+[01/28/19, 13:56:04:180] info: ╚═══════════════════════════════════════════════════════════════════════════════╝
+[01/28/19, 13:56:04:259] info: Initializing local storage instance at path: /Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack/local-settings.json
+[01/28/19, 13:56:04:500] info: cld3::loadModule: loading cld3 module
+[01/28/19, 13:56:04:513] info: cld3Loader::loadModule: running environment is NODE
+[01/28/19, 13:56:04:513] info: cld3Loader::loadModule: constructed module object for runtime
+[01/28/19, 13:56:04:534] info: SpellChecker:: updateSpellcheckerLanguage: Skip to set new language null, spellchecker is not available
+[01/28/19, 13:56:04:544] info: TouchBarIntegration: Initializing TouchBar classes
+[01/28/19, 13:56:04:548] info: Main window preload script finished
+{
+  "readyTime": 544.26772
+}
+[01/28/19, 13:56:05:150] info: cld3Loader::initializeRuntime: successfully initialized module
+[01/28/19, 13:56:05:151] info: cld3Loader::loadModule: initialized wasm binary Runtime
+[01/28/19, 13:56:05:912] info: Read UUID from file successful
+{
+  "uuid": "a79c39b0-77ec-5d0d-9593-736ba063cb5a"
+}
+[01/28/19, 13:56:07:058] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "state": "loaded",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:085] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:827] info: Store: SELECT_CHANNEL C0ENXAA5A
+[01/28/19, 13:56:07:827] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:831] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[01/28/19, 13:56:07:831] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T0ENXA7A8",
+  "theme": {
+    "active_item": "#1264A3",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#2BAC76",
+    "badge": "#CD2553",
+    "column_bg": "#3F0E40",
+    "hover_item": "#350D36",
+    "menu_bg": "#350d36",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/28/19, 13:56:07:835] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": {
+    "image_102": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_102.jpg",
+    "image_132": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_132.jpg",
+    "image_230": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_230.jpg",
+    "image_34": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_34.jpg",
+    "image_44": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_44.jpg",
+    "image_68": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_68.jpg",
+    "image_88": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_88.jpg",
+    "image_original": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_original.jpg"
+  },
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:837] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:837] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "state": "webapp-loaded",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:840] info: Store: UPDATE_SETTINGS
+{
+  "sandboxSigninWindow": true
+}
+[01/28/19, 13:56:07:934] info: Store: STORE_ENTERPRISE_ID_PAIR
+{
+  "enterpriseId": null,
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:934] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T0ENXA7A8",
+  "token": "xoxs-⋯"
+}
+[01/28/19, 13:56:08:446] info: postLoadTaskSetup: Setup spellchecker
+{
+  "version": "V1"
+}
+[01/28/19, 13:56:12:224] info: Store: SELECT_CHANNEL DFSPFV5FY
+[01/28/19, 13:56:27:299] info: Store: SELECT_CHANNEL G235EAW3T
+[01/28/19, 13:56:44:726] info: Store: SELECT_CHANNEL DFSPFV5FY
+[01/28/19, 14:34:01:476] info: Store: SELECT_CHANNEL G8CAN697G
+[01/28/19, 14:42:58:194] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "ERRwfWhPz0O1Mop",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548715378.073800&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:45:09:841] error: 2019/1/28 14:45:09.841 logging error: {"subtype":"show_sidebar_quickswitcher_button_true","message":"{\"show_sidebar_quickswitcher_button\":\"false\",\"k_key_omnibox_auto_hide_count\":\"0\",\"count_of_open_channels\":10}","stack":"Error\n    at n (https://a.slack-edge.com/bv1-6/rollup-core_required_ts.bce2184b1963c15ff1d8.min.js:1:117063)\n    at https://a.slack-edge.com/bv1-6/modern.vendor.df97f2d4cdf0a294a89e.min.js:1:28018\n    at Z (https://a.slack-edge.com/bv1-6/application.1d1590a648070e3abd13.min.js:1:1534400)\n    at https://a.slack-edge.com/bv1-6/application.1d1590a648070e3abd13.min.js:1:1686104\n    at Array.forEach (<anonymous>)\n    at https://a.slack-edge.com/bv1-6/application.1d1590a648070e3abd13.min.js:1:1685873\n    at i (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3906221)\n    at T._settlePromiseFromHandler (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3878718)\n    at T._settlePromise (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3879570)\n    at T._settlePromiseCtx (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3880110)\n    at i._drainQueue (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3837340)\n    at i._drainQueues (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3837393)\n    at drainQueues (https://a.slack-edge.com/bv1-6/rollup-core_required_libs.1f516be5a0bc85ee93c0.min.js:1:3835683)"}
+[01/28/19, 14:45:09:974] info: Store: SELECT_CHANNEL DFRB2KJR1
+[01/28/19, 14:45:15:891] info: Couldn't get hint text from messages in channel: Failed to fetch recent messages
+[01/28/19, 14:46:03:791] info: Store: FOREGROUND_APP
+[01/28/19, 14:47:17:757] info: Store: NEW_NOTIFICATION
+{
+  "channel": "DFRB2KJR1",
+  "id": "4xxOCziWvDkElJ5",
+  "launchUri": "slack://channel?id=DFRB2KJR1&message=1548715637.001800&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:48:04:361] info: Store: NEW_NOTIFICATION
+{
+  "channel": "DFRB2KJR1",
+  "id": "R66NUnsOkVm6pMj",
+  "launchUri": "slack://channel?id=DFRB2KJR1&message=1548715684.002500&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:48:07:287] info: Store: CLICK_NOTIFICATION
+{
+  "channel": "DFRB2KJR1",
+  "messageId": "1548715684.002500",
+  "notificationId": "R66NUnsOkVm6pMj",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:48:07:289] info: Store: SELECT_TEAM T0ENXA7A8
+[01/28/19, 15:10:50:624] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "kRR1fqt9OlRElDB",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548717050.080000&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 15:51:58:568] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "zppkH4uK8p0z2ZG",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548719518.081200&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 17:19:48:370] info: Store: NEW_NOTIFICATION
+{
+  "channel": "GFRD9Q65R",
+  "id": "VOORFkCJqjLyx4p",
+  "launchUri": "slack://channel?id=GFRD9Q65R&message=1548724787.054300&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}

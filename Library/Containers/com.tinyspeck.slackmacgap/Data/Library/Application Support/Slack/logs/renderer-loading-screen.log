@@ -1,0 +1,24 @@
+[01/28/19, 13:56:02:674] info: ╔═══════════════════════════════════════════════════════════════════════════════╗
+[01/28/19, 13:56:02:674] info: ║      Slack 3.3.7, darwin (Store) 17.7.0 on x64 at 01/28/19, 13:56:02:672      ║
+[01/28/19, 13:56:02:674] info: ╚═══════════════════════════════════════════════════════════════════════════════╝
+[01/28/19, 13:56:02:743] info: Initializing local storage instance at path: /Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack/local-settings.json
+[01/28/19, 13:56:03:085] info: Store: HANDLE_DEEP_LINK
+{
+  "causedLaunch": false,
+  "url": "slack://T0ENXA7A8/magic-login/536501349687-51d6e4d0e47632e8dd81143b851ad74c4c09e91fffd6eb4b5eb8b6d3d2cc44e2"
+}
+[01/28/19, 13:56:03:416] info: Store: BACKGROUND_CLIENTS_INITIALIZED
+[01/28/19, 13:56:03:417] info: Store: BACKGROUND_CLIENTS_INITIALIZED true
+[01/28/19, 13:56:03:536] info: Store: ADD_NEW_TEAM
+{
+  "id": "UFQQ284N9",
+  "team_id": "T0ENXA7A8"
+}
+[01/28/19, 13:56:03:543] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "state": "unloaded",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:03:737] info: Store: SET_NETWORK_STATUS online
+[01/28/19, 13:56:03:737] info: Store: MAIN_WINDOW_SHOWN

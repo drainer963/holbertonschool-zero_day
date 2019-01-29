@@ -1,0 +1,14 @@
+<key>4D534945•WWWHomePage</key>
+			<dict>
+				<key>ic-data</key>
+				<data>
+				2018-04-09 09:21:49.575 osascript[443:1962] GetInputSourceEnabledPrefs user file path = /var/root/Library/Preferences/com.apple.HIToolbox.plist
+2018-04-09 09:21:49.575 osascript[443:1962] GetInputSourceEnabledPrefs effective user id path = 0
+2018-04-09 09:21:49.575 osascript[443:1962] GetInputSourceEnabledPrefs user pref content = <CFBasicHash 0x7fef585084e0 [0x7fffaf857af0]>{type = immutable dict, count = 1,
+entries =>
+	2 : <CFString 0x7fffaf7ffb78 [0x7fffaf857af0]>{contents = "AppleCurrentKeyboardLayoutInputSourceID"} = <CFString 0x7fffaf81dcf8 [0x7fffaf857af0]>{contents = "com.apple.keylayout.US"}
+}
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+H2h0dHBzOi8vd3d3LmhvbGJlcnRvbnNjaG9vbC5jb20=
+				</data>
+			

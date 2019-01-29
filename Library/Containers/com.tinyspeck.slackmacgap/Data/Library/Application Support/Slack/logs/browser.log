@@ -1,0 +1,320 @@
+[01/28/19, 13:56:00:826] info: ╔═══════════════════════════════════════════════════════════════════════════════╗
+[01/28/19, 13:56:00:826] info: ║      Slack 3.3.7, darwin (Store) 17.7.0 on x64 at 01/28/19, 13:56:00:824      ║
+[01/28/19, 13:56:00:826] info: ╚═══════════════════════════════════════════════════════════════════════════════╝
+[01/28/19, 13:56:01:115] info: Initializing local storage instance at path: /Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack/local-settings.json
+[01/28/19, 13:56:01:191] error: Locale: Tried to access systemLocale before application was ready
+[01/28/19, 13:56:01:439] info: TraceRecorder: setting up trace recorder, trace will be stored under /Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack/logs/recorded-trace
+[01/28/19, 13:56:01:445] info: Configuring uncaughtExceptionHandler
+[01/28/19, 13:56:01:445] info: Configuring unhandledRejectionHandler
+[01/28/19, 13:56:01:445] info: Registered with apiKey acaff8df67924f677747922423057034
+[01/28/19, 13:56:01:758] info: Main: Received slack:// protocol link from open-url event, handling when ready
+{
+  "url": "slack://T0ENXA7A8/magic-login/536501349687-51d6e4d0e47632e8dd81143b851ad74c4c09e91fffd6eb4b5eb8b6d3d2cc44e2"
+}
+[01/28/19, 13:56:01:872] info: Store: persist/REHYDRATE
+[01/28/19, 13:56:01:958] info: Store: UPDATE_SETTINGS
+{
+  "isSignedIntoSlackOrg": false
+}
+[01/28/19, 13:56:01:959] info: UpdaterEpics: Updates disabled because
+{
+  "reasons": [
+    "Mac App Store build"
+  ]
+}
+[01/28/19, 13:56:01:961] info: Generated uuid and stored
+{
+  "uuid": "a79c39b0-77ec-5d0d-9593-736ba063cb5a"
+}
+[01/28/19, 13:56:02:007] info: Store: INITIALIZE_SETTINGS
+{
+  "releaseChannel": "mas",
+  "platformVersion": {
+    "major": 17,
+    "minor": 7,
+    "build": 0
+  },
+  "isTitleBarHidden": false,
+  "isDevMode": false,
+  "appVersion": "3.3.7",
+  "versionName": "Alaska",
+  "devEnv": null,
+  "resourcePath": "/Applications/Slack.app/Contents/Resources/app.asar",
+  "webappSrcPath": null,
+  "webappParams": null,
+  "launchOnStartup": false,
+  "openDevToolsOnStart": false,
+  "logFile": null,
+  "pretendNotReallyWindows10": false,
+  "isAeroGlassEnabled": false,
+  "isGpuCompositionAvailable": true
+}
+[01/28/19, 13:56:02:008] info: AutoLoginEpic: Checking for autologin.
+[01/28/19, 13:56:02:028] info: Store: UPDATE_SETTINGS
+{
+  "hasRunApp": true
+}
+[01/28/19, 13:56:02:043] info: WebContentsMediator: Attaching to new webContents
+[01/28/19, 13:56:02:048] info: Store: ADD_WINDOW
+{
+  "id": 2,
+  "type": "main"
+}
+[01/28/19, 13:56:02:049] info: BrowserViewManager: Starting initialization
+[01/28/19, 13:56:02:050] info: PersistSettingsWindowBehavior: Loading windowMetrics
+{
+  "settings": null
+}
+[01/28/19, 13:56:02:051] info: PersistSettingsWindowBehavior: Resetting to default window position
+{
+  "settings": {
+    "position": [
+      512,
+      159
+    ],
+    "size": [
+      1536,
+      1082
+    ]
+  }
+}
+[01/28/19, 13:56:02:051] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "position": [
+    512,
+    159
+  ],
+  "size": [
+    1536,
+    1082
+  ]
+}
+[01/28/19, 13:56:02:059] info: Store: UPDATE_SETTINGS
+{
+  "PrefSSBFileDownloadPath": "/Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Downloads"
+}
+[01/28/19, 13:56:02:061] info: DownloadListener: Downloads directory set to
+{
+  "downloadsDirectory": "/Users/744/Library/Containers/com.tinyspeck.slackmacgap/Data/Downloads"
+}
+[01/28/19, 13:56:02:063] info: Application: Setting main window ID
+{
+  "id": 2
+}
+[01/28/19, 13:56:02:064] info: App: Welcome to Slack 3.3.7 x64
+[01/28/19, 13:56:02:064] info: App load time: 1,472828730
+[01/28/19, 13:56:02:819] info: Store: HANDLE_DEEP_LINK
+{
+  "url": "slack://T0ENXA7A8/magic-login/536501349687-51d6e4d0e47632e8dd81143b851ad74c4c09e91fffd6eb4b5eb8b6d3d2cc44e2",
+  "causedLaunch": false
+}
+[01/28/19, 13:56:02:825] info: WebContentsMediator: Attaching to new webContents
+[01/28/19, 13:56:02:826] info: MagicLogin: Making magic login API request to https://slack.com/api/
+[01/28/19, 13:56:03:415] info: Store: BACKGROUND_CLIENTS_INITIALIZED
+[01/28/19, 13:56:03:416] info: Store: BACKGROUND_CLIENTS_INITIALIZED true
+[01/28/19, 13:56:03:533] info: Store: ADD_NEW_TEAM
+{
+  "team_id": "T0ENXA7A8",
+  "id": "UFQQ284N9"
+}
+[01/28/19, 13:56:03:539] info: BrowserViewManager: Creating views for new teams
+{
+  "newTeamIds": [
+    "T0ENXA7A8"
+  ]
+}
+[01/28/19, 13:56:03:540] info: BrowserViewManager: Activating BrowserView
+{
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:03:540] info: BrowserViewManager: Creating BrowserView
+{
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:03:542] info: WebContentsMediator: Attaching to new webContents
+[01/28/19, 13:56:03:542] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "teamId": "T0ENXA7A8",
+  "state": "unloaded"
+}
+[01/28/19, 13:56:03:545] info: Background Clients Update: 
++-----------+-------+------------+
+|           | Full  | Background |
+|-----------+-------+------------+
+| T0ENXA7A8 | start |            |
++-----------+-------+------------+
+[01/28/19, 13:56:03:550] info: BrowserViewManager: Activating BrowserView
+{
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:03:553] info: Background Clients Update: 
++-----------+-------+------------+
+|           | Full  | Background |
+|-----------+-------+------------+
+| T0ENXA7A8 | start |            |
++-----------+-------+------------+
+[01/28/19, 13:56:03:557] info: MagicLogin: added team T0ENXA7A8
+[01/28/19, 13:56:03:557] info: Application: handleDeepLink for magic login complete
+[01/28/19, 13:56:03:736] info: Store: SET_NETWORK_STATUS online
+[01/28/19, 13:56:03:737] info: Store: MAIN_WINDOW_SHOWN
+[01/28/19, 13:56:04:067] info: Team boot count
+{
+  "count": 1
+}
+[01/28/19, 13:56:06:777] info: WebContents LifeCycle: webContents:4 from 'unloaded' to 'loaded' took 3231 ms
+[01/28/19, 13:56:06:778] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "state": "loaded",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:06:778] info: Background Clients Update: 
++-----------+---------+------------+
+|           | Full    | Background |
+|-----------+---------+------------+
+| T0ENXA7A8 | loading |            |
++-----------+---------+------------+
+[01/28/19, 13:56:06:990] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:263] info: Store: SELECT_CHANNEL C0ENXAA5A
+[01/28/19, 13:56:07:269] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:304] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[01/28/19, 13:56:07:323] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T0ENXA7A8",
+  "theme": {
+    "active_item": "#1264A3",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#2BAC76",
+    "badge": "#CD2553",
+    "column_bg": "#3F0E40",
+    "hover_item": "#350D36",
+    "menu_bg": "#350d36",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/28/19, 13:56:07:459] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": {
+    "image_102": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_102.jpg",
+    "image_132": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_132.jpg",
+    "image_230": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_230.jpg",
+    "image_34": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_34.jpg",
+    "image_44": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_44.jpg",
+    "image_68": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_68.jpg",
+    "image_88": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_88.jpg",
+    "image_original": "https://avatars.slack-edge.com/2018-09-23/441501209877_6f6619e1e65fba3f1b50_original.jpg"
+  },
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:541] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:562] info: WebContents LifeCycle: webContents:4 from 'loaded' to 'webapp-loaded' took 784 ms
+[01/28/19, 13:56:07:562] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 4,
+  "state": "webapp-loaded",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:07:563] info: Background Clients Update: 
++-----------+-------+------------+
+|           | Full  | Background |
+|-----------+-------+------------+
+| T0ENXA7A8 | ready |            |
++-----------+-------+------------+
+[01/28/19, 13:56:07:567] info: Store: UPDATE_SETTINGS
+{
+  "sandboxSigninWindow": true
+}
+[01/28/19, 13:56:07:839] info: Store: STORE_ENTERPRISE_ID_PAIR
+{
+  "teamId": "T0ENXA7A8",
+  "enterpriseId": null
+}
+[01/28/19, 13:56:07:841] info: Store: STORE_API_TOKEN
+{
+  "token": "xoxs-⋯",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 13:56:12:177] info: Store: SELECT_CHANNEL DFSPFV5FY
+[01/28/19, 13:56:27:259] info: Store: SELECT_CHANNEL G235EAW3T
+[01/28/19, 13:56:44:708] info: Store: SELECT_CHANNEL DFSPFV5FY
+[01/28/19, 14:34:01:451] info: Store: SELECT_CHANNEL G8CAN697G
+[01/28/19, 14:42:58:192] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "ERRwfWhPz0O1Mop",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548715378.073800&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:42:58:209] info: Creating new macOS notification.
+[01/28/19, 14:45:09:884] info: Store: SELECT_CHANNEL DFRB2KJR1
+[01/28/19, 14:46:03:786] info: Store: FOREGROUND_APP
+[01/28/19, 14:47:17:756] info: Store: NEW_NOTIFICATION
+{
+  "channel": "DFRB2KJR1",
+  "id": "4xxOCziWvDkElJ5",
+  "launchUri": "slack://channel?id=DFRB2KJR1&message=1548715637.001800&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:47:17:757] info: Creating new macOS notification.
+[01/28/19, 14:48:04:360] info: Store: NEW_NOTIFICATION
+{
+  "channel": "DFRB2KJR1",
+  "id": "R66NUnsOkVm6pMj",
+  "launchUri": "slack://channel?id=DFRB2KJR1&message=1548715684.002500&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 14:48:04:361] info: Creating new macOS notification.
+[01/28/19, 14:48:07:286] info: Store: CLICK_NOTIFICATION
+{
+  "notificationId": "R66NUnsOkVm6pMj",
+  "channel": "DFRB2KJR1",
+  "teamId": "T0ENXA7A8",
+  "messageId": "1548715684.002500"
+}
+[01/28/19, 14:48:07:288] info: Store: SELECT_TEAM T0ENXA7A8
+[01/28/19, 15:10:50:622] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "kRR1fqt9OlRElDB",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548717050.080000&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 15:10:50:623] info: Creating new macOS notification.
+[01/28/19, 15:51:58:567] info: Store: NEW_NOTIFICATION
+{
+  "channel": "G8CAN697G",
+  "id": "zppkH4uK8p0z2ZG",
+  "launchUri": "slack://channel?id=G8CAN697G&message=1548719518.081200&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 15:51:58:568] info: Creating new macOS notification.
+[01/28/19, 17:19:48:368] info: Store: NEW_NOTIFICATION
+{
+  "channel": "GFRD9Q65R",
+  "id": "VOORFkCJqjLyx4p",
+  "launchUri": "slack://channel?id=GFRD9Q65R&message=1548724787.054300&team=T0ENXA7A8",
+  "ssbFilename": "knock_brush.mp3",
+  "teamId": "T0ENXA7A8"
+}
+[01/28/19, 17:19:48:370] info: Creating new macOS notification.

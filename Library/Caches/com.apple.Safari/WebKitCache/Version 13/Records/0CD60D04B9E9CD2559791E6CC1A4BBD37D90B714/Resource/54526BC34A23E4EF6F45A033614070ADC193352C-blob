@@ -1,0 +1,1355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<!-- start of server/head-include-1.html -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:webmasters@gnu.org" />
+<link rel="icon" type="image/png" href="/graphics/gnu-head-mini.png" />
+<meta name="ICBM" content="42.355469,-71.058627" />
+<meta name="DC.title" content="gnu.org" />
+<link rel="stylesheet" type="text/css" href="/reset.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/mini.css" media="handheld" />
+<link rel="stylesheet" type="text/css" href="/layout.min.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/print.min.css" media="print" />
+<!-- end of server/head-include-1.html -->
+
+<!-- end of server/header.html -->
+
+<title>A guided tour of Emacs</title>
+<style type="text/css">
+  table td { border: none }
+  tt { font-size: larger }
+  table + p { margin-top: 1em }
+  table.commandlist td { border: 1px solid #999; padding: 4px 8px }
+  table.greytop thead { border-bottom: 1px solid #999; font-weight: bold }
+  table.greytop td { padding: 4px }
+</style>
+<!-- start of server/banner.html -->
+<!-- start of head-include-2.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- end of head-include-2.html -->
+
+</head>
+<body>
+<div class="inner">
+<!-- start of server/body-include-1.html -->
+
+
+
+
+
+<div id="toplinks">
+ <a href="#content">Skip to main text</a>
+ <span class="gnun-split"></span>
+ <a href="/server/select-language.html?callback=/software/emacs/tour/" rel="nofollow">
+ Set language
+ <span class="gnun-split"></span>
+ </a>
+</div> <!-- /toplinks -->
+
+<div id="searcher">
+ <form method="get" action="//www.gnu.org/cgi-bin/estseek.cgi" class="header">
+  <div>
+  <input name="phrase" id="phrase" type="text" size="18" accesskey="s"
+         value="Why GNU/Linux?" onfocus="this.value=''" />
+  <input type="submit" value="Search" />
+  </div>
+ </form>
+</div><!-- /searcher -->
+
+<!-- end of server/body-include-1.html -->
+
+<!-- start of server/body-include-2 -->
+
+<div id="header">
+<div id="fsf-frame">
+<p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom?referrer=4052">JOIN&nbsp;THE&nbsp;FSF</a></p>
+<div id="fssbox">
+<p><a href="//www.fsf.org/fss">Free Software Supporter</a></p>
+<form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31"
+ method="post" class="header">
+ <div>
+  <input name="postURL" type="hidden" value="" />
+  <input type="hidden" name="group[25]" value="1" />
+  <input name="cancelURL" type="hidden" value="https://crm.fsf.org/civicrm/profile?reset=1&amp;gid=31" />
+  <input name="_qf_default" type="hidden" value="Edit:cancel" />
+ </div>
+ <p>
+  <input type="text" id="frmEmail" name="email-Primary" size="18" maxlength="80"
+         value="email address" onfocus="this.value=''"/>
+  <input type="submit" name="_qf_Edit_next" value="Sign up" />
+ </p>
+</form>
+</div><!-- /fssbox -->
+</div><!-- /fsf-frame -->
+
+<div id="gnu-banner">
+ <a href="/">
+ <img src="/graphics/heckert_gnu.transp.small.png"
+      alt=" [A GNU head] " /><strong>GNU</strong> Operating System</a>
+
+<p id="fsf-support">Sponsored by the <a href="#mission-statement">Free Software Foundation</a></p>
+</div><!-- /gnu-banner -->
+<div style="clear:both"></div>
+</div><!-- /header -->
+
+<div id="navigation">
+ <ul>
+
+
+
+   <li id="tabAboutGNU"><a href="/gnu/gnu.html">ABOUT&nbsp;GNU</a></li>
+
+
+  <li id="tabPhilosophy"><a href="/philosophy/philosophy.html">PHILOSOPHY</a></li>
+
+
+  <li id="tabLicenses"><a href="/licenses/licenses.html">LICENSES</a></li>
+
+
+  <li id="tabEducation"><a href="/education/education.html">EDUCATION</a></li>
+
+
+  <li id="tabSoftware" class="active">
+     <span class='no-display'>=</span> 
+    <a href="/software/software.html">SOFTWARE</a>
+    <span class="gnun-split"></span>
+     <span class='no-display'>=</span> 
+  </li>
+
+
+  <li id="tabDoc"><a href="/doc/doc.html">DOCS</a></li>
+
+
+  <li id="tabHelp"><a href="/help/help.html">HELP&nbsp;GNU</a></li>
+
+  <li id="more-links"><a href="#fsf-links">More &#9660;</a></li>
+ </ul>
+ <div style="clear:both"></div>
+</div><!--  /navigation -->
+<!-- end of server/body-include-2 -->
+
+
+<div id="content">
+<!-- end of server/banner.html -->
+
+
+<h2>A Guided Tour of Emacs</h2>
+
+<p style="text-align: center">
+  <a href="images/splash.png">
+  <img src="images/splash-small.png" alt="Emacs splash screen" /></a>
+</p>
+
+<p>The <a
+  href="http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html">GNU
+  Emacs Manual</a> calls Emacs <em>the extensible, customizable,
+  self-documenting real-time display editor</em>, but this description tells
+  beginners little about what Emacs is capable of. To give you an idea, here is
+  a sampling of the things you can do with Emacs:</p>
+
+<p>Beyond just being able to edit plain text files, Emacs includes special
+  features to help you write in many different human languages and
+  programming/markup languages:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td align="center">
+ <table border="0" cellpadding="2" cellspacing="0">
+  <tr>
+   <td><a href="images/hello.png">
+       <img src="images/hello-small.png"
+	    alt="'Hello' in various languages" /></a></td>
+  </tr>
+  <tr>
+   <td><a href="images/latex.png">
+       <img src="images/latex-small.png"
+	    alt="Syntax highlighting in Latex mode" /></a></td>
+  </tr>
+  <tr>
+   <td><a href="images/code.png">
+       <img src="images/code-small.png"
+	    alt="Syntax highlighting in C mode" /></a></td>
+  </tr>
+  <tr>
+   <td align="center">
+    <small>(Click on any of these pictures for a larger view.)</small></td></tr>
+ </table>
+</td></tr>
+</table>
+
+<p>&hellip;as well as tools for compiling, running, and testing programs. Emacs
+  integrates with GDB to provide an IDE (<tt>M-x gdb</tt>):</p>
+<p style="text-align: center">
+  <a href="images/gdb.png">
+  <img src="images/gdb-composite.png" alt="GDB mode screenshot" /></a>
+</p>
+
+<p>Emacs can compare two files and highlight their differences (<tt>M-x
+    ediff</tt>):</p>
+<p style="text-align: center">
+  <a href="images/ediff.png">
+  <img src="images/ediff-small.png" alt="Ediff mode screenshot" /></a>
+</p>
+
+<p>Emacs is a file manager (<tt>M-x dired</tt>):</p>
+<p style="text-align: center">
+  <a href="images/dired.png">
+  <img src="images/dired-small.png" alt="Close-up view of Dired" /></a>
+</p>
+
+<p>Emacs can read news, mail, and RSS feeds (<tt>M-x gnus</tt>):</p>
+<p style="text-align: center">
+  <a href="images/gnus.png">
+  <img src="images/gnus-small.png" alt="Gnus screenshot" /></a>
+</p>
+
+<p>You can even play tetris in Emacs (<tt>M-x tetris</tt>):</p>
+<p style="text-align: center">
+  <a href="images/tetris.png">
+  <img src="images/tetris-small.png" alt="Tetris screenshot" /></a>
+</p>
+
+<p>You might see now why some people consider Emacs to be not merely a text
+  editor but almost a complete operating system. Some users find that they can
+  do almost all of their work from within Emacs.</p>
+
+<h2>Why Emacs?</h2>
+
+<p>Emacs helps you be productive by providing an integrated environment for
+  many different kinds of tasks:</p>
+<ul>
+  <li>All of the basic editing commands (and there are lots of them) are
+    available no matter what you're trying to do: write code, read a manual,
+    use a shell, or compose an email.</li>
+  <li>All the tools Emacs provides for opening, saving, searching, and
+    processing text (and more) are available to you no matter what you're
+    doing.</li>
+</ul>
+
+<p>This uniformity means that working within Emacs is often easier than
+  learning to use a separate program, especially when that program is liable to
+  have its own set of editing capabilities and shortcuts.</p>
+
+<p>If Emacs doesn't work the way you'd like, you can use
+  the <a href="http://www.gnu.org/software/emacs/manual/elisp.html">Emacs
+  Lisp</a> (Elisp) language to customize Emacs, automate common tasks, or add
+  new features. Elisp is very easy to get started with and yet remarkably
+  powerful: you can use it to alter and extend almost any feature of Emacs. You
+  can make Emacs whatever you want it to be by writing Elisp code; one
+  testament to this is the fact that all of the features pictured above (and
+  many more described later in this tour) are written in Elisp.</p>
+
+<p>Emacs is also portable. You can use the same editor (with the same
+  configuration) on many platforms, including GNU/Linux, BSD and other
+  Unix derivatives, and some proprietary operating systems such as
+  Microsoft Windows.</p>
+
+<h2>Before we get started&hellip;</h2>
+
+<p>If you install Emacs first, you can follow along with the examples presented
+  here. Whenever you decide to start using Emacs, you should take the Emacs
+  tutorial. It's an interactive hands-on which will familiarize you with many
+  things, including:</p>
+
+<ul>
+  <li>Starting and exiting Emacs</li>
+  <li>Basic text movement and editing commands</li>
+  <li>Opening and saving files</li>
+  <li>Emacs concepts: windows, frames, files, and buffers</li>
+  <li>Invoking commands with keybindings and with <tt>M-x</tt></li>
+</ul>
+
+<p>To run the tutorial, start Emacs and type <tt>C-h t</tt>, that
+  is, <tt>Ctrl-h</tt> followed by <tt>t</tt>.</p>
+
+<p>All the features described in this tour work in GNU Emacs 23. Some features
+  described weren't included in previous versions of Emacs but can be installed
+  separately.</p>
+
+<p>Occasionally I'll say something like this:</p>
+
+<blockquote><p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Using-Region.html">
+      <tt>(info "(emacs)Using Region")</tt></a> for more information.</p>
+</blockquote>
+
+<p>This refers to a page in the Emacs manual which you can read by following
+  the link. However, you can also read such pages directly in Emacs by using
+  the built-in documentation reader, called Info. To do this,
+  press <tt>M-:</tt>, then type <tt>(info&nbsp;"(emacs)Using&nbsp;Region")</tt>
+  followed by <tt>RET</tt>:</p>
+
+<p style="text-align: center">
+  <a href="images/manual.png">
+  <img src="images/manual-small.png" alt="Info mode screenshot" /></a>
+</p>
+
+<p>The Emacs manual is an excellent resource for learning about Emacs; you can
+  read it from within Emacs by typing <tt>C-h r</tt>. You can
+  also <a href="http://www.gnu.org/software/emacs/manual/emacs.html">read the
+  manual on the web</a>.</p>
+
+<p>Emacs has numerous other help features, some of which will be described
+  later. You can view a list of all help features by typing <tt>C-h
+  C-h</tt>.</p>
+
+<h2>The power of text manipulation</h2>
+
+<p>Emacs gives you a large collection of tools for manipulating text, which
+  turns out to be a Swiss army knife of sorts because Emacs also has ways to
+  present all kinds of information in text. Here's one example:</p>
+
+<p><tt>M-x dired</tt> invokes <em>Dired</em>, the file manager mode, on a
+  directory of your choice. Then <tt>C-x C-q</tt> (or <tt>M-x
+  wdired-change-to-wdired-mode</tt>) switches to <em>Editable Dired</em>
+  mode:</p>
+
+<p style="text-align: center">
+  <a href="images/wdired.png">
+  <img src="images/wdired-small.png"
+       alt="Close-up of a directory listing in Editable Dired mode." /></a>
+</p>
+
+<p>In this mode, changing the filenames in the right-hand column and then
+  typing <tt>C-x C-s</tt> ("save") renames the indicated files. Renaming files
+  is as easy as editing text. Batch renaming (e.g., renaming every file of the
+  form <tt>icon_*</tt> to <tt>backup_icon_*</tt>) is as easy as performing a
+  search and replace (<tt>M-x query-replace</tt> or <tt>M-%</tt>); there's no
+  need to learn to use a separate batch renaming tool.</p>
+
+<p>From within Emacs, you can interact with not just files and directories, but
+  system utilities, compilers, debuggers, personal information managers, the
+  web, email, chat, various other internet services, and more, and there's an
+  ecosystem of third-party tools to make even more functionality accessible.
+  Because of this integration, the benefits of learning to use any of Emacs'
+  editing features (say, search and replace) are multiplied many times
+  over.</p>
+
+<h2>Basic editing commands</h2>
+
+<p>One way that Emacs lets users work quickly and efficiently is by providing
+  high-level commands for moving around in, and manipulating, text. There are
+  commands that operate on characters, words, lines, sentences, paragraphs,
+  pages, function definitions, whitespace, and more. You can use them anywhere
+  you read or edit text: source code, web pages, shells, directory listings,
+  email messages, and so on.</p>
+
+<h3>Moving around in buffers</h3>
+
+<p>The most basic buffer movement commands move point (the cursor) by rows
+  (lines) or columns (characters):</p>
+
+<table width="75%" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center">
+<table border="0" cellpadding="2" cellspacing="0" width="80%">
+ <tr>
+  <td>
+   <table class="commandlist" width="300">
+    <tr><td><tt>C-f</tt></td><td>Forward one character</td></tr>
+    <tr><td><tt>C-n</tt></td><td>Next line</td></tr>
+   </table>
+  </td>
+  <td>
+   <table class="commandlist" width="300">
+    <tr><td><tt>C-b</tt></td><td>Back one character</td></tr>
+    <tr><td><tt>C-p</tt></td><td>Previous line</td></tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</td></tr></table>
+
+<p>Here are some ways to move around in larger increments:</p>
+
+<table width="75%" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center">
+<table border="0" cellpadding="2" cellspacing="0" width="80%">
+ <tr>
+  <td>
+   <table class="commandlist" width="300">
+    <tr><td><tt>C-a</tt></td><td>Beginning of line</td></tr>
+    <tr><td><tt>M-f</tt></td><td>Forward one word</td></tr>
+    <tr><td><tt>M-a</tt></td><td>Previous sentence</td></tr>
+    <tr><td><tt>M-v</tt></td><td>Previous screen</td></tr>
+    <tr><td><tt>M-&lt;</tt></td><td>Beginning of buffer</td></tr>
+   </table>
+  </td>
+  <td>
+   <table class="commandlist" width="300">
+    <tr><td><tt>C-e</tt></td><td>End of line</td></tr>
+    <tr><td><tt>M-b</tt></td><td>Back one word</td></tr>
+    <tr><td><tt>M-e</tt></td><td>Next sentence</td></tr>
+    <tr><td><tt>C-v</tt></td><td>Next screen</td></tr>
+    <tr><td><tt>M-&gt;</tt></td><td>End of buffer</td></tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</td></tr></table>
+
+<p>When you get used to these keys, they're faster than their more familiar
+  equivalents in other applications (Home, End, Ctrl+Left, etc.) because you
+  don't have to move your hands from the touch typing position. And these keys
+  are far faster than using a mouse to move around in a buffer.</p>
+
+<p>Emacs often provides additional commands for moving around in
+  context-specific ways (e.g. in source code, commands to move to the previous
+  or next function definition).</p>
+
+<p>Many of the above commands move to a location relative to your current
+  position in the buffer, so you can use them repeatedly (e.g. <tt>C-p C-p
+  C-p</tt> to move back three lines). You can use the <em>prefix argument</em>
+  to save time: <tt>C-u</tt> followed by a number and a movement command
+  repeats that command the specified number of times. You can also
+  use <tt>M-[digit]</tt> instead of <tt>C-u [digit]</tt>. If you
+  use <tt>C-u</tt> without specifying a digit, the default is 4. Omitting the
+  digit can save time when you don't know precisely how many units you want to
+  jump anyway.</p>
+
+<table width="65%" border="0" cellpadding="0" cellspacing="0">
+<tr><td align="center">
+<table class="commandlist" width="450">
+  <tr><td><tt>C-u 3 C-p</tt></td><td>Back 3 lines</td></tr>
+  <tr><td><tt>C-u 10 C-f</tt></td><td>Forward 10 characters</td></tr>
+  <tr><td><tt>M-1 M-0 C-f</tt></td><td>Forward 10 characters</td></tr>
+  <tr><td><tt>C-u C-n</tt></td><td>Forward 4 lines</td></tr>
+  <tr><td><tt>C-u C-u C-n</tt></td><td>Forward 16 lines</td></tr>
+  <tr><td><tt>C-u C-u C-u C-n</tt></td><td>Forward 64 lines</td></tr>
+</table>
+</td></tr></table>
+
+<p>You can jump directly to a particular line number in a buffer:</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-g g</tt></td><td>Jump to specified line</td></tr>
+</table>
+
+<p>Searching for text is a handy way to move around in a buffer. Think of
+  search as just another facility for movement. When you're looking for
+  something specific, you can use incremental search to take you right there
+  instead of scanning by lines or pages. More about search later.</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-s</tt></td><td>Incremental search forward</td></tr>
+  <tr><td><tt>C-r</tt></td><td>Incremental search backward</td></tr>
+</table>
+
+<p>One other way of moving around in buffers is by using the <em>mark</em>:</p>
+
+<h3>Mark</h3>
+
+<p>Emacs remembers something called the <em>mark</em>, which is a previous
+  cursor position. You can set mark to indicate a particular place in your
+  buffer so you can return to it easily. <tt>C-x C-x</tt> at a later time will
+  return point to mark. Actually, that command also moves mark to where point
+  formerly was; therefore, a second <tt>C-x C-x</tt> returns point to its
+  original position.</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-SPC</tt></td><td>Set mark to the current location</td></tr>
+  <tr><td><tt>C-x C-x</tt></td><td>Swap point and mark</td></tr>
+</table>
+
+<p>You can set mark explicitly, but certain commands set mark for you,
+  providing you with convenient footholds as you move around your buffer:</p>
+
+<table class="greytop">
+  <thead><tr><td>When you&hellip;</td><td>mark is set to&hellip;</td></tr></thead>
+  <tr><td>Type <tt>C-SPC</tt></td><td>your current location</td></tr>
+  <tr><td>Jump to either end of the buffer (<tt>M-&lt;</tt>
+      or <tt>M-&gt;</tt>)</td><td>your previous location</td></tr>
+  <tr><td>Exit incremental search</td><td>where you began searching</td></tr>
+  <tr><td>Yank text</td><td>the beginning of the yanked region</td></tr>
+  <tr><td>Insert a buffer or file</td>
+    <td>the beginning of the inserted text</td></tr>
+</table>
+
+<p>As you can see, Emacs tries to be helpful: many commands that have the
+  potential to take you long distances set mark so that a simple <tt>C-x
+  C-x</tt> takes you back to where you were. <em>Emacs makes it difficult to
+  lose your place in a buffer</em>: even if you take a detour, you don't need
+  to scroll around to get back to where you were.</p>
+
+<p>Emacs saves many previous values of the mark for you. You can cycle through
+  the <em>mark ring</em>, which contains the last 16 marks you've set in the
+  current buffer:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-u C-SPC</tt></td><td>Cycle through mark ring</td></tr>
+</table>
+
+<h3>Region</h3>
+
+<p>Mark serves another purpose: mark and point together delineate <em>the
+  region</em>. Many commands operate only on the text in the region (i.e.
+  between mark and point). You can set the region explicitly by setting mark
+  (<tt>C-SPC</tt>) and then moving point elsewhere, or by clicking and dragging
+  with the mouse. Emacs provides some commands which set the region for you by
+  moving point and mark appropriately, for example:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-x h</tt></td><td>Make region contain the entire buffer ("Select
+      all")</td></tr>
+  <tr><td><tt>M-h</tt></td><td>Make region contain the current
+      paragraph</td></tr>
+</table>
+
+<p>Other commands helpfully set the region as part of what they do.
+  <tt>C-y</tt> (yank), inserting a file, and inserting a buffer all set the
+  region to surround the inserted text.</p>
+
+<p><em>Narrowing</em> restricts the view (and editing) of a buffer to a certain
+  region. This is handy when you're only working with a small part of a buffer
+  (e.g. a chapter in a book). Then commands like incremental search,
+  or <tt>beginning-of-buffer</tt> or <tt>end-of-buffer</tt> don't lead you out
+  of the region of interest, and commands like search and replacement don't
+  affect the entire file.</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-x n n</tt></td><td>Narrow buffer to the current region</td></tr>
+  <tr><td><tt>C-x n w</tt></td><td>Restore ("widen") buffer</td></tr>
+</table>
+
+<p>For more information
+  see <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Narrowing.html">
+    <tt>(info "(emacs)Narrowing")</tt></a>.</p>
+
+<h3>Killing ("cutting") text</h3>
+
+<p>As with text movement, Emacs provides commands for deleting text in various
+  amounts.</p>
+
+<p><tt>C-k</tt> kills the portion of the current line after point (or deletes
+  the newline following point if point is at the end of line). The prefix
+  argument for <tt>C-k</tt> can be used to kill multiple lines:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-k</tt></td><td>Kill line</td></tr>
+  <tr><td><tt>C-u 10 C-k</tt></td><td>Kill 10 lines</td></tr>
+</table>
+
+<p>The following commands operate on the region, and are the closest analogs to
+  "cut" and "copy" in Emacs:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-w</tt></td><td>Kill region ("cut")</td></tr>
+  <tr><td><tt>M-w</tt></td><td>Save region to kill ring without deleting
+      ("copy")</td></tr>
+</table>
+
+<p>These commands are also handy:</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-d</tt></td><td>Kill next word</td></tr>
+  <tr><td><tt>M-k</tt></td><td>Kill to end of sentence</td></tr>
+</table>
+
+<p>All of the above commands <em>kill</em> the text being deleted, which means
+  that Emacs removes the text and squirrels it away for later retrieval
+  ("yanking"). Most commands which delete significant amounts of text kill it
+  rather than simply removing it, so that you can use those commands either to
+  "delete" text or to "cut" it for later use.</p>
+
+<h3>Yanking ("pasting") text</h3>
+
+<p>After a piece of text has been killed, it goes to a place called
+  the <em>kill ring</em> which is analagous to the "clipboard": you
+  can <em>yank</em> an item to restore it from the kill ring with <tt>C-y</tt>.
+  Unlike the clipboard, however, the kill ring is capable of holding many
+  different items. If the item you want to yank is not placed when you
+  type <tt>C-y</tt>, type <tt>M-y</tt> (repeatedly, if necessary) to cycle
+  through previously killed items.</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-y</tt></td><td>Yanks last killed text</td></tr>
+  <tr><td><tt>M-y</tt></td><td>Replace yanked text with previously killed
+      text</td></tr>
+</table>
+
+<p>Recall that most commands which delete a large amount of text in fact kill
+  it (i.e. place it in the kill ring) so you can restore it later. <em>Emacs
+  makes it very difficult to lose a lot of text permanently</em>: in editors
+  with only a single clipboard, one can easily accidentally delete a large
+  chunk of text or clobber the contents of the clipboard (by cutting two items
+  in succession). But in Emacs, in either of those cases, the lost text can
+  easily be retrieved from the kill ring.</p>
+
+<h3>Undo</h3>
+
+<p>Emacs' undo facility works slightly differently from that of other editors.
+  In most editors, if you undo some changes, then make some new changes, the
+  states formerly accessible with "redo" can no longer be recovered! So when
+  using "undo" and "redo" extensively, one has to be very careful to avoid
+  accidentally clobbering the redo list.</p>
+
+<p>Emacs uses a different undo model which does not have this deficiency. After
+  any consecutive sequence of undos, Emacs makes all your previous actions
+  undoable, including the undos. (This will happen whenever a sequence of undos
+  is broken by any other command.)</p>
+
+<p>If this sounds complicated, just remember that "undo" is always capable of
+  getting you back to <em>any previous state your buffer was in</em> (unless
+  Emacs has run out of memory to store the undo history). The principle here is
+  that <em>Emacs makes it very difficult to accidentally lose your work</em>.</p>
+
+<p>Undo is available via three different keys:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-/</tt></td><td>Undo</td></tr>
+  <tr><td><tt>C-_</tt></td><td>Undo</td></tr>
+  <tr><td><tt>C-x u</tt></td><td>Undo</td></tr>
+</table>
+
+<p>So if you need to get back to a previous buffer state, simply move the
+  cursor (so as to break any existing sequence of undos), and
+  press <tt>C-/</tt> until you find what you want.</p>
+
+<p>To learn more about undo,
+  see <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Undo.html">
+    <tt>(info "(emacs)Undo")</tt></a>.</p>
+
+<h3>Incremental search</h3>
+
+<table class="commandlist">
+  <tr><td><tt>C-s</tt></td><td>Incremental search</td></tr>
+</table>
+
+<p>Typing <tt>C-s</tt> followed by some text starts incremental search. Emacs
+  jumps to the next occurrence of whatever you have typed, as you are typing it
+  (you may have seen similar behavior in Mozilla Firefox or other web
+  browsers), and all matches visible on your screen are highlighted.</p>
+
+<p style="text-align: center">
+  <a href="images/isearch.png"><img src="images/isearch-small.png" alt="" /></a>
+</p>
+
+<p>Within incremental search, you can type <tt>C-s</tt> again at any time to
+  jump to the next occurrence.</p>
+
+<p>When you've found what you're looking for, you can either type <tt>RET</tt>
+  (or use almost any movement command) to exit search at the occurrence you've
+  found, or <tt>C-g</tt> ("cancel") to return to where your search started. If
+  you exit search at the found occurrence, you can easily jump back to where
+  you started with <tt>C-x C-x</tt> since incremental search sets mark
+  appropriately.</p>
+
+<p>These commands help you to issue previously issued queries:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-s C-s</tt></td><td>Search for most recently searched item</td></tr>
+  <tr><td><tt>C-s M-p</tt></td><td>Previous item in search history</td></tr>
+  <tr><td><tt>C-s M-n</tt></td><td>Next item in search history</td></tr>
+  <tr><td><tt>C-h k C-s</tt></td><td>Guide to more commands available in
+      incremental search</td></tr>
+</table>
+
+<p>You can perform a backward incremental search with <tt>C-r</tt>. (All the
+  above commands can be activated similarly from within backward search.) At
+  any time during a forward (or backward) search, you can type <tt>C-r</tt>
+  (<tt>C-s</tt>) to switch to a backward (forward) search.</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-r</tt></td><td>Backward incremental search</td></tr>
+</table>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html">
+    <tt>(info "(emacs)Incremental Search")</tt></a> for more information.</p>
+
+<h3>Search and replacement</h3>
+
+<table class="commandlist">
+  <tr><td><tt>M-%</tt></td><td>Query replace</td></tr>
+</table>
+
+<p>The query replace command prompts you for a search string and a replacement.
+  Then, for each match in the buffer, you can choose whether or not to replace
+  the search string. Here are some of the options available at each prompt:</p>
+
+<ul>
+  <li>Type <tt>y</tt> to replace the current match.</li>
+  <li>Type <tt>n</tt> to skip to the next match without replacing.</li>
+  <li>Type <tt>q</tt> to exit without doing any more replacements.</li>
+  <li>Type <tt>.</tt> to replace this match, then exit.</li>
+  <li>Type <tt>!</tt> to replace all remaining matches with no more
+  questions.</li>
+</ul>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Query-Replace.html">
+    <tt>(info "(emacs)Query Replace")</tt></a> for more information about these
+  (and other) options. You can also type <tt>?</tt> anytime inside a
+  search-and-replace operation to see a guide.</p>
+
+<h3>Regular expression search</h3>
+
+<p>Emacs allows you to search for regular expressions:</p>
+
+<table class="commandlist">
+  <tr><td><tt>C-M-s</tt></td><td>Regular expression incremental
+      search</td></tr>
+</table>
+
+<p>Regular expressions are a succinct way of searching for many different
+  strings at once by using a special language to describe the form of what
+  you're looking for. Regular expression syntax is beyond the scope of this
+  tour; see <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Regexps.html">
+    <tt>(info "(emacs)Regexps")</tt></a> for more information.</p>
+
+<p>If you're new to regexps, or you are constructing a particularly complicated
+  regexp, you can use the regexp builder (<tt>M-x re-builder</tt>). This
+  command pops up a separate window in which you can test out your regexp, and
+  any matches in your original buffer will get highlighted as you edit your
+  regexp.</p>
+
+<p>Instead of jumping through matches one by one, you can also choose to
+  display them all at once. <tt>M-x occur</tt> prompts you for a regular
+  expression, then displays in a separate buffer a list of all lines in the
+  current buffer which match that regexp (as well as their line numbers).
+  Clicking on any occurrence takes you to that line in the buffer.</p>
+
+<h3>Regular expression search and replacement</h3>
+
+<p>Regular expressions are even more powerful in search and replace, because
+  Emacs allows the replacement text to depend on the found text. You can
+  control replacement by inserting special escape sequences in the replacement
+  string, and Emacs will substitute them appropriately:</p>
+
+<table class="greytop">
+  <thead>
+    <tr><td>When you type this<br />in a replacement string:</td><td>Emacs replaces it with:</td></tr>
+  </thead>
+  <tr><td><tt>\&amp;</tt></td><td>the original found text</td></tr>
+  <tr><td><tt>\1</tt>, <tt>\2</tt>, etc.</td><td>the 1<sup>st</sup>,
+  2<sup>nd</sup>, etc. parenthesized subgroup in the found text</td></tr>
+  <tr><td><tt>\#</tt></td><td>the number of replacements done so far</td></tr>
+  <tr><td><tt>\?</tt></td><td>a string obtained by prompting the user on each
+      match</td></tr>
+  <tr><td><tt>\,(lisp-expression &hellip;)</tt></td><td>the result of evaluating an
+      arbitrary function</td></tr>
+</table>
+
+<p>Here's an example. Suppose we have a buffer containing names like this:</p>
+
+<pre>George Washington
+John Adams
+Thomas Jefferson
+James Madison
+James Monroe</pre>
+
+<p>If we run <tt>M-x replace-regexp</tt> and replace the regexp <tt>\(\w+\)
+    \(\w+\)</tt> with <tt>\,(upcase \2), \1</tt>, our buffer now looks like
+  this:</p>
+
+<pre>WASHINGTON, George
+ADAMS, John
+JEFFERSON, Thomas
+MADISON, James
+MONROE, James</pre>
+
+<p>As you can see, regexp replacement is capable of doing some pretty
+  sophisticated transformations. (Roughly, the search expression searches for
+  two words; the replacement string inserts an uppercased version of the second
+  word, followed by a comma, followed by the first word.)</p>
+
+<h3>Keyboard Macros</h3>
+
+<p>Keyboard macros are a way to remember a fixed sequence of keys for later
+  repetition. They're handy for automating some boring editing tasks.</p>
+
+<table class="commandlist">
+  <tr><td><tt>F3</tt></td><td>Start recording macro</td></tr>
+  <tr><td><tt>F4</tt></td><td>Stop recording macro</td></tr>
+  <tr><td><tt>F4</tt></td><td>Play back macro once</td></tr>
+  <tr><td><tt>M-5 F4</tt></td><td>Play back macro 5 times</td></tr>
+  <tr><td><tt>M-0 F4</tt></td><td>Play back macro over and over until it fails</td></tr>
+</table>
+
+<p>For example, this sequence of keys does the exact same transformation that
+  we did with regular expression replacement earlier, that is, it transforms a
+  line containing <tt>George Washington</tt> to <tt>WASHINGTON, George</tt>:</p>
+
+<p style="text-align: center"><tt>M-d C-d M-u , [SPC] C-y C-n C-a</tt></p>
+
+<p>After we record that key sequence as a macro, we can type <tt>M-0 F4</tt> to
+  transform the buffer pictured earlier; in this case, Emacs runs the macro
+  repeatedly until it has reached the end of the buffer.</p>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html">
+    <tt>(info "(emacs)Keyboard Macros")</tt></a> for more information.</p>
+
+<h2>Help with commands</h2>
+
+<p>If you've read this far, you are probably intimidated by the thought of
+  having to remember a bunch of keyboard commands and command names.
+  Fortunately, Emacs includes comprehensive and easily accessible
+  documentation. The documentation isn't just for beginners. Emacs has
+  thousands of commands, of which most people only use a small number. So even
+  Emacs experts frequently consult the docs in order to learn about new
+  commands or jog their memory on old ones.</p>
+
+<p>If you don't remember what a particular key or command does, you can read a
+  description of it by using one of the following commands:</p>
+
+<dl>
+  <dt><tt>C-h k</tt></dt>
+  <dd>Shows documentation for the command associated with any particular
+    key.</dd>
+  <dt><tt>C-h f</tt></dt>
+  <dd>Shows documentation for any particular command, by name (i.e. what you
+    would type after <tt>M-x</tt>).</dd>
+</dl>
+
+<p>For example, <tt>C-h k C-s</tt> and <tt>C-h f isearch-forward RET</tt> both
+  display a page describing incremental search:</p>
+
+<p style="text-align: center">
+  <a href="images/functionhelp.png"><img src="images/functionhelp-small.png" alt="" /></a>
+</p>
+
+<p>This is handy, for example, if you don't remember what <tt>C-s</tt> does, or
+  if you remember that it invokes incremental search but want to know more
+  about that feature. The documentation gives the full name of the command,
+  shows which (if any) keys are bound to it, and gives a complete description
+  of what the command does.</p>
+
+<p>On the other hand, if you don't remember how to invoke a particular feature,
+  you can use <em>apropos</em> to search for it:</p>
+
+<dl>
+  <dt><tt>C-h a</tt></dt>
+  <dd>Search for commands by keywords or regexp</dd>
+</dl>
+
+<p>For example, if I remember that I want to activate <em>narrowing</em>, but
+  don't remember how, I can type <tt>C-h a narrow RET</tt> which shows a brief
+  list of commands having to do with <em>narrow</em>, one of which is <tt>M-x
+  narrow-to-region</tt>.</p>
+
+<h2>More useful features</h2>
+
+<h3>Integration with common tools</h3>
+
+<p>Emacs is notable for its integration with many common tools. Not only can
+  you invoke them from within the editor, Emacs usually helps you use their
+  output more effectively. Here are some examples:</p>
+
+<dl>
+  <dt><tt>M-x shell</tt></dt>
+  <dd>
+    <p>Starts a shell in the buffer named <tt>*shell*</tt>, switching to it if
+    it already exists. Use <tt>C-u M-x shell</tt> to use a buffer with a
+    different name.</p>
+    <p style="text-align: center">
+      <a href="images/shell.png"><img src="images/shell-small.png" alt="" /></a>
+    </p>
+  </dd>
+  <dt><tt>M-x compile</tt></dt>
+  <dd>
+    <p>Invokes <tt>make</tt> (with targets and options of your choice) and
+    displays output in a new buffer. Emacs identifies error lines containing
+    filenames and line numbers, and you can click on them to jump directly to
+    the corresponding buffer and line.</p>
+    <p style="text-align: center">
+      <a href="images/compile.png"><img src="images/compile-small.png" alt="" /></a>
+    </p>
+  </dd>
+  <dt><tt>M-x gdb</tt></dt>
+  <dd>
+    <p>Invokes <tt>gdb</tt> in a new buffer. You can use the gdb command line
+    as usual in that buffer. However, Emacs lets you set breakpoints directly
+    from your source buffers and shows execution by marking the active line in
+    your source buffers. Emacs can also display breakpoints, the stack, and
+    locals, simultaneously and each in their own window.</p>
+    <p style="text-align: center">
+      <a href="images/gdb.png"><img src="images/gdb-composite.png" alt="" /></a>
+    </p>
+  </dd>
+  <dt><tt>M-x grep</tt></dt>
+  <dd>
+    <p>Invokes <tt>grep</tt> and prints results in a new buffer. Like <tt>M-x
+    compile</tt>, when you click on a match Emacs opens the correct file and
+    takes you to the matching line.</p>
+    <p style="text-align: center">
+      <a href="images/grep.png"><img src="images/grep-small.png" alt="" /></a>
+    </p>
+  </dd>
+  <dt><tt>M-x man</tt></dt>
+  <dd><p>Displays <tt>man</tt> pages.</p>
+    <p style="text-align: center">
+      <a href="images/man.png"><img src="images/man-small.png" alt="" /></a>
+    </p>
+  </dd>
+</dl>
+
+<p>Here are some more assorted tools:</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-x calculator</tt></td><td>A simple calculator.</td></tr>
+  <tr><td><tt>M-x calendar</tt></td><td>A calendar.</td></tr>
+  <tr><td><tt>M-x phases-of-moon</tt></td><td>Shows upcoming quarters of the
+      moon.</td></tr>
+</table>
+
+<h3>Invoking shell commands</h3>
+
+<p>If you need to execute a simple shell command, these commands can save you
+  the trouble of switching to an xterm or starting a new Emacs shell
+  buffer:</p>
+
+<dl>
+  <dt><tt>M-x shell-command</tt> or <tt>M-!</tt></dt>
+  <dd><p>Executes a command and displays the output in a new buffer.</p></dd>
+  <dt><tt>M-x shell-command-on-region</tt> or <tt>M-|</tt></dt>
+  <dd><p>Executes a command, piping in the current region as input; displays
+    the output in a new buffer.</p></dd>
+</dl>
+
+<p>For either command, a <tt>C-u</tt> prefix will insert the output in your
+  current buffer rather than using a temporary buffer.</p>
+
+<h3>Version control</h3>
+
+<p>Emacs helps you manipulate and edit files stored in version control. Emacs
+  supports CVS, Subversion, bzr, git, hg, and other systems, but it offers a
+  uniform interface, called VC, regardless of the version control system you
+  are using.</p>
+
+<p>Emacs automatically detects when a file you're editing is under version
+  control, and displays something like this in the mode line: <tt>CVS-1.14</tt>
+  to indicate the version control system in use, and the current version.</p>
+
+<p><tt>M-x vc-next-action</tt> or <tt>C-x v v</tt> commits the current file
+  (prompting you for a log message) if you've modified it. (Under version
+  control systems that require locking, this command also acquires a lock for
+  you.)</p>
+
+<p>VC provides other commands for version control-related tasks:</p>
+
+<dl>
+  <dt><tt>C-x v =</tt></dt>
+  <dd><p>Displays a diff showing the changes you've made to the current
+      file.</p></dd>
+  <dt><tt>C-x v ~</tt></dt>
+  <dd><p>Prompts you for a version number and shows you that version of the
+      current file in another window.</p></dd>
+  <dt><tt>C-x v g</tt></dt>
+  <dd><p>Displays an annotated version of the file showing, for each line, the
+      commit where that line was last changed and by whom. On any line you can
+      press <tt>L</tt> to view the log message for that commit or <tt>D</tt> to
+      view the associated diff.</p></dd>
+  <dt><tt>C-x v l</tt></dt>
+  <dd><p>Displays a log of previous changes to the file. When the cursor is on
+      a particular log entry, you can press <tt>d</tt> to view the diff
+      associated with that change or <tt>f</tt> to view that version of the
+      file.</p></dd>
+</dl>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Version-Control.html">
+    <tt>(info "(emacs)Version Control")</tt></a> for more information.</p>
+
+<p>Some special features are enabled when you are looking at a diff (whether
+  from a file, or one produced by VC). Emacs lets you move around in a diff by
+  hunks or files, apply individual hunks to a file, reverse a diff, and do
+  other operations useful for reading or manually editing diffs.</p>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Diff-Mode.html">
+    <tt>(info "(emacs)Diff Mode")</tt></a> for more information.</p>
+
+<h3>Editing remote files</h3>
+
+<p>Emacs can edit remote files transparently (as if they were local) using a
+  feature called Tramp. Whenever Emacs asks for a file, you can indicate a
+  remote file like so: <tt>/myname@remotehost:/remote/path/to/file</tt>. Emacs
+  retrieves the file over SSH, FTP, or another method and takes care of saving
+  it when you're done. With Tramp you can edit files on different computers
+  using a single Emacs session, even if Emacs is not installed on the remote
+  side.</p>
+
+<p>You can also use Tramp to edit local files with another user's permissions.
+  You can edit files with root privileges via sudo: <tt>/sudo::/etc/file</tt>,
+  or via su: <tt>/root@localhost:/etc/file</tt>.</p>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/tramp/index.html">
+    <tt>(info "(TRAMP)")</tt></a> for more information.</p>
+
+<h3>Emacs server</h3>
+
+<p>Some people like to keep only a single instance of Emacs open and edit all
+  their files in there. Doing this has a few advantages:</p>
+<ul>
+  <li>You can kill/yank text between buffers in the same instance of
+    Emacs.</li>
+  <li>Emacs remembers argument histories (what commands you've used, what files
+    you've opened, terms you've searched for, etc.), but only within each
+    instance.</li>
+  <li>If you have many customizations, starting new instances of Emacs is
+    slow.</li>
+</ul>
+<p>Alas, when you type <tt>emacs</tt> in a shell to edit a file (or
+  when <tt>$EDITOR</tt> is invoked by an external program), a new instance of
+  Emacs is started. You can avoid this by using <tt>emacsclient</tt>, which
+  instead opens a new frame connected to an existing instance of Emacs:</p>
+<ol>
+  <li>In your existing instance of Emacs, type <tt>M-x server-start</tt>. Or
+    add <tt>(server-start)</tt> to your <tt>.emacs</tt> file to make it do that
+    automatically at startup.</li>
+  <li>To edit a file, type <tt>emacsclient&nbsp;-t&nbsp;FILENAME</tt> at a
+    prompt. You can also change your <tt>$EDITOR</tt>
+    to <tt>emacsclient&nbsp;-t</tt> if you're using programs that automatically
+    invoke <tt>$EDITOR</tt>. (<tt>emacsclient&nbsp;-t</tt> opens a new frame on
+    the terminal; alternatively, <tt>emacsclient&nbsp;-c</tt> opens a new X
+    frame.)</li>
+  <li>When you're done editing, type <tt>C-x C-c</tt>, which closes the
+    frame.</li>
+</ol>
+
+<p>For more information,
+  see <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html">
+    <tt>(info "(emacs)Emacs Server")</tt></a>.</p>
+
+<h3>Being unproductive with Emacs</h3>
+
+<p>Emacs even comes with diversions:</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-x tetris</tt></td><td>Tetris</td></tr>
+  <tr><td><tt>M-x hanoi</tt></td><td>Towers of Hanoi game</td></tr>
+  <tr><td><tt>M-x doctor</tt></td><td>Emacs psychotherapist</td></tr>
+</table>
+
+<h2>Common Emacs concepts</h2>
+
+<h3>Prefix arguments</h3>
+
+<p>As we've seen, prefix arguments are sometimes used to indicate
+  repetition:</p>
+<table class="commandlist">
+  <tr><td><tt>C-u 10 C-f</tt></td><td>Forward 10 characters</td></tr>
+  <tr><td><tt>C-u M-a</tt></td><td>Backward 4 sentences</td></tr>
+</table>
+
+<p>We've also seen a prefix argument used to modify the following command (the
+  numeric argument, if provided, is ignored):</p>
+<table class="commandlist">
+  <tr><td><tt>M-x shell</tt></td><td>Create or switch to shell buffer
+      named <tt>*shell*</tt></td></tr>
+  <tr><td><tt>C-u M-x shell</tt></td><td>Create or switch to shell buffer with
+      specified name</td></tr>
+</table>
+
+<p>If you ever get confused, the documentation for any command (accessible
+  with <tt>C-h f</tt> or <tt>C-h k</tt>) describes the effect of the prefix
+  argument, if any.</p>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Arguments.html">
+    <tt>(info "(emacs)Arguments")</tt></a> for more information.</p>
+
+<h3>Major modes</h3>
+
+<p>Every buffer has an associated <em>major mode</em>, which alters certain
+  behaviors, key bindings, and text display in that buffer. The idea is to
+  customize the appearance and features available based on the contents of the
+  buffer.</p>
+
+<p>Emacs ships with dozens of major modes for editing widely used programming
+  languages, markup languages, and configuration file formats. These major
+  modes tell Emacs how to:</p>
+
+<ul>
+  <li>Indent your code correctly (usually, simply pressing <tt>TAB</tt> once
+    will make Emacs indent the current line correctly).</li>
+  <li>Do syntax highlighting</li>
+  <li>Identify the boundaries of functions</li>
+  <li>Invoke interpreters, compilers, or debuggers for your code.</li>
+</ul>
+
+<p>Some commands we've seen, like <tt>M-x dired</tt>, <tt>M-x compile</tt>,
+  and <tt>M-x shell</tt>, in fact use their own special major modes to make
+  their buffers provide certain features (such as highlighting compile errors
+  and making them clickable).</p>
+
+<p>The current major mode is displayed in the mode line. The last thing on the
+  mode line should be one or more items in parentheses, like <tt>(Python
+  Narrow)</tt>. The first of these is the name of the major mode.</p>
+
+<p>You can switch modes in an existing buffer by using <tt>M-x</tt> and the
+  name of the mode:</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-x java-mode</tt></td><td>Mode for editing Java files</td></tr>
+  <tr><td><tt>M-x python-mode</tt></td><td>Mode for editing Python files</td></tr>
+  <tr><td><tt>M-x text-mode</tt></td><td>Mode for editing text files</td></tr>
+  <tr><td><tt>M-x fundamental-mode</tt></td><td>Mode with no specializations at all</td></tr>
+</table>
+
+<p>Emacs is very good at determining the right mode to use when you open a
+  file, so you'll rarely have to use the above commands.</p>
+
+<p>These are examples of the commands provided by language major modes:</p>
+
+<table class="greytop">
+  <thead>
+    <tr><td>Language</td><td>Some special commands available</td></tr>
+  </thead>
+  <tr><td>Lisp</td><td>Manipulate s-exps in various ways; execute expressions</td></tr>
+  <tr><td>Python</td><td>Indent, unindent blocks; run code in Python shell</td></tr>
+  <tr><td>HTML</td><td>Insert and close tags; preview in browser</td></tr>
+</table>
+
+<p>In almost all cases, major modes for unsupported formats are available as
+  extension packages. You can find many of them
+  on <a href="http://www.emacswiki.org/">EmacsWiki</a>.</p>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Major-Modes.html">
+    <tt>(info "(emacs)Major Modes")</tt></a> for more information.</p>
+
+<h3>Minor modes</h3>
+
+<p>Every buffer can also have any number of <em>minor modes</em>, which are
+  extra pieces of functionality you can enable, independently of each other and
+  of the major mode. Minor modes are listed in the mode line after the major
+  mode inside the parentheses. Here are a few commonly used ones:</p>
+
+<dl>
+  <dt><tt>M-x auto-fill-mode</tt></dt>
+  <dd><p>Wraps your lines automatically when they get longer than 70
+    characters.</p></dd>
+  <dt><tt>M-x flyspell-mode</tt></dt>
+  <dd><p>Highlights misspelled words as you type.</p></dd>
+  <dt><tt>M-x follow-mode</tt></dt>
+  <dd>
+    <p>If you have a buffer displayed in two windows side by
+    side, <tt>follow-mode</tt> forces them to scroll together such that the
+    text displayed in the second window comes right after the text in the first
+    window, and moving your cursor off the bottom of the left window causes it
+    to appear at the top of the right window:</p>
+    <p style="text-align: center">
+      <a href="images/follow.png"><img src="images/follow-small.png" alt="" /></a>
+    </p>
+  </dd>
+</dl>
+
+<p>Some minor modes are global, i.e. they affect the behavior of the entire
+  editor, rather than just that of a specific buffer.</p>
+
+<table class="commandlist">
+  <tr><td><tt>M-x icomplete-mode</tt></td><td>In the M-x prompt (and
+      elsewhere), show completions as you type</td></tr>
+  <tr><td><tt>M-x iswitchb-mode</tt></td><td>Show all buffer names when you
+      switch buffers with <tt>C-x b</tt></td></tr>
+</table>
+
+<p>See <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html">
+    <tt>(info "(emacs)Minor Modes")</tt></a> for more information.</p>
+
+<p>If you need help with a particular mode, <tt>C-h m</tt> describes the active
+  major and minor modes. The mode description often lists important commands
+  which are useful in that mode, which is helpful when you're learning to use a
+  new mode.</p>
+
+<h3>The minibuffer</h3>
+
+<p>The minibuffer (the space at the bottom of the frame) is where Emacs prompts
+  you for input in most situations: for a command, when you type <tt>M-x</tt>;
+  for a file name, within <tt>M-x find-file</tt>; for an Elisp expression,
+  within <tt>M-x eval-expression</tt>, etc. Here are some features common to
+  most minibuffer prompts:</p>
+
+<ul>
+  <li>You can use most buffer editing and movement commands. You can move
+    around in, kill text from, and yank text to minibuffers.</li>
+  <li>You can browse previous inputs to the current prompt using <tt>M-p</tt>
+    and <tt>M-n</tt>.</li>
+  <li>Tab completion is often available. For example, the <tt>M-x</tt> prompt
+    offers tab completion, so you needn't worry about typing long command names
+    like <tt>M-x wdired-change-to-wdired-mode</tt> when <tt>M-x wdired-ch
+    TAB</tt> suffices.</li>
+</ul>
+
+<h2>Tips for beginners</h2>
+
+<h3>In the event of an emergency&hellip;</h3>
+
+<p>Here's what to do if you've accidentally pressed a wrong key:</p>
+
+<ul>
+  <li>If you executed a command and Emacs has modified your buffer,
+    use <tt>C-/</tt> to undo that change.</li>
+  <li>If you pressed a prefix key (e.g. <tt>C-x</tt>) or you invoked a command
+    which is now prompting you for input (e.g. <tt>Find file: &hellip;</tt>),
+    type <tt>C-g</tt>, repeatedly if necessary, to cancel.</li>
+</ul>
+
+<p><tt>C-g</tt> also cancels a long-running operation if it appears that Emacs
+  has frozen.</p>
+
+<h3>Keyboard and terminal setup</h3>
+
+<p>Some Emacs users remap their Caps Lock key to act as an additional Ctrl key,
+  because it is easier to reach. See
+  <a href="https://www.emacswiki.org/emacs/MovingTheCtrlKey">instructions
+  for moving Ctrl</a>.</p>
+
+<p>Due to your keyboard or terminal configuration, you may find that some keys
+  seem to do the wrong thing:</p>
+
+<p>If your <tt>DEL</tt> key is not working (sometimes, typing <tt>DEL</tt>
+  brings up a help screen, as if you typed <tt>C-h</tt>), try <tt>M-x
+  normal-erase-is-backspace-mode</tt>.</p>
+
+<p>If your meta key is not working, in order to type a key that contains meta,
+  you can instead type <tt>ESC</tt>, then the remaining keys. For
+  example, <tt>ESC x</tt> is the same as <tt>M-x</tt>, and <tt>ESC C-s</tt> is
+  the same as <tt>C-M-s</tt>.</p>
+
+<h3>Frequently asked questions</h3>
+
+<p>Emacs comes with a FAQ which explains how to perform many commonly requested
+  tasks; press <tt>C-h C-f</tt> to read it.</p>
+
+<h2>Migrating to Emacs</h2>
+
+<p>Emacs has a number of options for easing the transition from other editing
+  environments.</p>
+
+<h3>Emacs for Windows users</h3>
+
+<p>In Windows, the bread and butter editing commands
+  are <tt>C-z</tt>, <tt>C-x</tt>, <tt>C-c</tt>, and <tt>C-v</tt>.
+  Unfortunately, these keys are frequently used in Emacs for other purposes
+  (suspend, prefix key, prefix key, and next page). You can get those keys back
+  for Undo, Cut, Copy, and Paste by turning on "CUA mode" from the Options
+  menu. CUA mode also lets you make a selection by using Shift in combination
+  with movement keys, as you would do on Windows.</p>
+
+<p>Since <tt>C-x</tt> and <tt>C-c</tt> are so integral to Emacs operation (they
+  are prefix keys for many commands), CUA mode only binds <tt>C-x</tt>
+  and <tt>C-c</tt> to Cut and Copy, respectively, when you have selected some
+  text.</p>
+
+<p>You can learn more about CUA mode by typing <tt>C-h f cua-mode RET</tt>.</p>
+
+<h3>Emacs for vi/vim users</h3>
+
+<p>Viper (<tt>M-x viper-mode</tt>) is a set of modes for emulating vi editing
+  behavior in Emacs. It provides different levels of vi-adherence, depending on
+  how vi-like you want your Emacs to be.</p>
+
+<p>For more information about Viper,
+  see <a href="http://www.gnu.org/software/emacs/manual/html_node/viper/index.html">
+    <tt>(info "(viper)")</tt></a>.</p>
+
+<h2>Emacs resources</h2>
+
+<p>The <a href="http://www.gnu.org/software/emacs/manual/emacs.html">GNU Emacs
+    Manual</a> (<tt>C-h r</tt>) is the definitive guide if you want to learn
+  more about Emacs. Some Emacs features have their
+  own, <a href="http://www.gnu.org/software/emacs/manual/">separate
+    manuals</a> (<tt>C-h i d</tt>).</p>
+
+<p>The <a href="http://www.gnu.org/software/emacs/manual/efaq.html">GNU Emacs
+    FAQ</a> (<tt>C-h C-f</tt>) answers many questions that beginners have about
+  how Emacs works and how to set it up to do particular things.</p>
+
+<p><a href="http://www.emacswiki.org">EmacsWiki</a> contains information about
+  many downloadable Emacs extensions, as well as tips for using and customizing
+  Emacs.</p>
+
+<p>You can ask questions on
+  the <a href="http://lists.gnu.org/mailman/listinfo/help-gnu-emacs">help-gnu-emacs
+    mailing list</a>.</p>
+
+</div><!-- for id="content", starts in the include above -->
+
+              <!-- begin server/footer-text.html -->
+<div style="clear:both"></div>
+<div id="back-to-top"><a href="#navigation"><span>TOP</span> &#9650;</a></div>
+
+<hr class="no-display" />
+<div id="fsf-links">
+ <ul>
+  <li class="gnu"><a href="/proprietary/proprietary.html">MALWARE</a></li>
+  <li class="gnu"><a href="/graphics/graphics.html">GNU&nbsp;ART</a></li>
+  <li class="gnu"><a href="/people/people.html">GNU'S&nbsp;WHO?</a></li>
+  <li class="gnu"><a href="/server/sitemap.html">SITEMAP</a></li>
+  <li><a href="//directory.fsf.org">FREE&nbsp;SOFTWARE&nbsp;DIR.</a></li>
+  <li><a href="https://h-node.org/">HARDWARE</a></li>
+ </ul>
+</div><!-- /fsf-links -->
+
+<div id="mission-statement">
+
+<blockquote>
+<p style="direction:ltr; text-align:left"><a href="//www.fsf.org"><img id="fsfbanner"
+src="/graphics/fsf-logo-notext-small.png" alt=" [FSF logo] "/></a><strong>
+&ldquo;The Free Software Foundation (FSF) is a nonprofit with a worldwide
+mission to promote computer user freedom. We defend the rights of all
+software users.&rdquo;</strong></p>
+</blockquote>
+
+<p style="direction:ltr; text-align:left">
+The <a href="//www.fsf.org">Free Software Foundation</a> is
+the principal organizational sponsor of the GNU Operating System.
+<strong>Support GNU and the FSF</strong> by <a
+href="//shop.fsf.org/">buying manuals and gear</a>, <a
+href="https://my.fsf.org/associate/support_freedom?referrer=4052">
+<strong>joining the FSF</strong></a> as an associate member, or <a
+href="//donate.fsf.org/"><strong>making a donation</strong></a>.</p>
+
+</div><!-- /mission-statement -->
+<!-- end server/footer-text.html -->
+
+
+<div id="footer">
+<div class="unprintable">
+
+<p>
+Please send FSF &amp; GNU inquiries to
+<a href="mailto:gnu@gnu.org">&lt;gnu@gnu.org&gt;</a>.
+There are also <a href="/contact/">other ways to contact</a>
+the FSF.
+Broken links and other corrections or suggestions can be sent to
+<a href="mailto:bug-gnu-emacs@gnu.org">&lt;bug-gnu-emacs@gnu.org&gt;</a>.
+</p>
+
+<p>
+Please see the
+<a href="/server/standards/README.translations.html">Translations
+README</a> for information on coordinating and submitting
+translations of this article.
+</p>
+</div>
+
+<p>
+Copyright &copy; 2007 Free Software Foundation, Inc.
+</p>
+
+<p>Copyright &copy; 2007 Phil
+Sung, <a href="mailto:psung@alum.mit.edu">psung@alum.mit.edu</a></p>
+
+
+<p>This page is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nd/4.0/">Creative
+Commons Attribution-NoDerivatives 4.0 International License</a>.</p>
+
+<!-- start of server/bottom-notes.html -->
+<div id="bottom-notes" class="unprintable">
+<p><a href="//www.fsf.org/about/dmca-notice">Copyright Infringement Notification</a></p>
+<div id="generic">
+
+
+</div>
+</div>
+<!-- end of server/bottom-notes.html -->
+
+
+<p class="unprintable">
+Updated:
+<!-- timestamp start -->
+$Date: 2016/06/20 13:37:40 $
+<!-- timestamp end -->
+</p>
+</div>
+</div>
+</body>
+</html>

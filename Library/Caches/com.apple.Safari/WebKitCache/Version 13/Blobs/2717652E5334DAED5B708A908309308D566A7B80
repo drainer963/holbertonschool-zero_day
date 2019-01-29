@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Holberton School">
+    <meta name="google" content="notranslate" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Holberton School's awesome intranet</title>
+
+    <link rel="stylesheet" media="all" href="/assets/application-d01b261b11e979bc92fb2d8c0af2898a3946187022b1d1c0a092e44fea91d3c8.css" />
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	  <script src="/assets/application-a2515a6605ad2976859f377773d183e7444a1c85f2924a7cf2f4c9dfa1e5e4a8.js"></script>
+	  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-9fa2327dcd7525c6f6fbcce056e0660771444d5335e188114838747925affea1.ico" />
+	  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="+7a8nDvNim6FfmfFL8cvc1tgWytfLQM8ZXyXBRWohfBgPCdPxHFsHAZtAAs81FoavoybvZhSN0jsLheP9K1Sww==" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Video player -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+
+    <!-- Store user timezone -->
+    <script>
+      Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+    </script>
+  </head>
+
+  <body class="signed_in env_production" translate="no" class="notranslate">
+
+      <nav id="nav-left" class="hidden-xs title-font">
+        <a href="/">
+          <div id="holberton-logo" class="">
+            <div class="logo"></div>
+            <a class="onair_container" data-toggle="modal" data-target="#video_streams_current_modal" title="Video Streaming in progress...">
+              <div class="onair_item">
+                <i class="fa fa-television" aria-hidden="true"></i>
+                <i class="fa fa-podcast animate-flicker" aria-hidden="true"></i>
+              </div>
+            </a>
+          </div>
+</a>        <ul>
+            <li>
+    <a href="/dashboards/my_planning">
+        <div class="icon">
+          <i class="fa fa-calendar"></i>
+        </div>
+      My Planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+        <div class="icon">
+          <i class="fa fa-list"></i>
+        </div>
+      My Projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_reefineries">
+        <div class="icon">
+          <i class="fa fa-list"></i>
+        </div>
+      My Reefineries
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+        <div class="icon">
+          <i class="fa fa-file-text"></i>
+        </div>
+      My Concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_peers">
+        <div class="icon">
+          <i class="fa fa-users"></i>
+        </div>
+      My Peers
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+        <div class="icon">
+          <i class="fa fa-check"></i>
+        </div>
+      My QA Reviews
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+        <div class="icon">
+          <i class="fa fa-book"></i>
+        </div>
+      My Captain's Logs
+</a>  </li>
+    <li>
+      <a href="/dashboards/my_professional_track">
+          <div class="icon">
+            <i class="fa fa-thumbs-o-up"></i>
+          </div>
+        My Professional track
+</a>    </li>
+  <li>
+    <a href="/dashboards/my_officers">
+        <div class="icon" style="padding-left: 2px;">
+          <i class="fa fa-building"></i>
+        </div>
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_speakers_of_the_day">
+        <div class="icon">
+          <i class="fa fa-microphone"></i>
+        </div>
+      My Speakers of the Day
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+        <div class="icon">
+          <i class="fa fa-server"></i>
+        </div>
+      My Servers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_containers">
+        <div class="icon">
+          <i class="fa fa-cloud"></i>
+        </div>
+      My Containers
+</a>  </li>
+
+    <li>
+        <a target="_blank" href="https://holbertonschool.libib.com/">
+            <div class="icon">
+              <i class="fa fa-book"></i>
+            </div>
+          Library
+</a>    </li>
+
+<hr />
+<li>
+  <a href="/users/my_profile">
+      <div class="icon">
+        <i class="fa fa-user"></i>
+      </div>
+    My Profile
+</a></li>
+
+        </ul>
+      </nav>
+
+    <main>
+
+        <nav class="navbar navbar-default navbar-main visible-xs">
+          <div class="container">
+            <div class="navbar-header mobile-nav-bar ">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <div id="holberton-logo">
+                  <div class="logo"></div>
+                </div>
+</a>              <div class="onair_container" data-toggle="modal" data-target="#video_streams_current_modal"  title="Video Streaming in progress...">
+                <div class="onair_item">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  <i class="fa fa-podcast animate-flicker" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+    <a href="/dashboards/my_planning">
+      My Planning
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_projects">
+      My Projects
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_current_reefineries">
+      My Reefineries
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_concepts">
+      My Concepts
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_peers">
+      My Peers
+</a>  </li>
+  <li>
+    <a href="/dashboards/corrections_i_can_make">
+      My QA Reviews
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_captain_log">
+      My Captain's Logs
+</a>  </li>
+    <li>
+      <a href="/dashboards/my_professional_track">
+        My Professional track
+</a>    </li>
+  <li>
+    <a href="/dashboards/my_officers">
+      My Officers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_speakers_of_the_day">
+      My Speakers of the Day
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_server">
+      My Servers
+</a>  </li>
+  <li>
+    <a href="/dashboards/my_containers">
+      My Containers
+</a>  </li>
+
+    <li>
+        <a target="_blank" href="https://holbertonschool.libib.com/">
+          Library
+</a>    </li>
+
+<hr />
+<li>
+  <a href="/users/my_profile">
+    My Profile
+</a></li>
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Trevor Ofarrell <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a rel="nofollow" data-method="delete" href="/auth/sign_out">Log out</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+      
+
+      
+
+      
+
+
+      
+      
+
+      <article class="">
+
+        
+  <h2 style="color: #FF0000;">Please read and agree</h2>
+    <div class="well no-print">
+      <p>by clicking this box, you acknowledge that attendance is an important piece and expectation of peer learning at Holberton and that you understand the PTO and Professional Track at Holberton as well as its impact on your standing</p>
+
+    </div>
+
+
+<h1 class="gap">Professional Track</h1>
+
+
+<p>
+  0-Day
+</p>
+
+
+
+
+<hr>
+
+<div class="gap formatted-content">
+    <p><img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/7/d2c21d99e3e187418554.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJIMMWEC6CH2PXSCQ%2F20190129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190129T003123Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c14109998c30716966e952eb790789e44afd2bce32428289324ba6ab8771ecb5" alt="" style="" /></p>
+
+<h2>README</h2>
+
+<p>Holberton School empowers you to become software engineers (not students); this is why professional development is an integral part of our education and experience.</p>
+
+<blockquote>
+<p>The Professional Track notes your professional behavior at school according to your attendance, behavior, and observance of responsibilities within the community. </p>
+</blockquote>
+
+<p>In short &hellip;</p>
+
+<ul>
+<li><p>Baseline score of 100% each trimester</p></li>
+<li><p>Professionalism score <strong>acts as a weight on your overall score</strong></p></li>
+<li><p>Score lowered if you are:</p>
+
+<ul>
+<li>not helping / respecting others</li>
+<li>not respecting school space</li>
+<li>violating school rules stated in Catalog</li>
+<li>not fulfilling attendance requirements</li>
+<li>cheating*
+</br></li>
+</ul></li>
+<li><p>an overall average below 80% for the trimester will prevent you from moving forward in the program.</p></li>
+<li><p>2 PTOs per block to use as you deem fit <strong>without impacting your score</strong> ; PTO does not roll over but you get 2 fresh ones each trimester!</p></li>
+</ul>
+
+<h2>PTO Basics</h2>
+
+<h3>2 PTOs per trimester</h3>
+
+<ul>
+<li><p>You may use PTOs however you like</p></li>
+<li><p>At the end of trimester, any remaining PTOs will expire</p></li>
+<li><p><strong>PTOs beyond the 2nd will deduct from your Professionalism Track score</strong></p>
+
+<ul>
+<li>3rd == - 20%</li>
+<li>4th == - 40%</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>If you take a 3rd PTO, it will endanger your ability to move forward; a 4th PTO usage will prevent a student from moving into next trimester</p>
+</blockquote>
+
+<ul>
+<li><p><strong>Late or Leave Early == - ½ PTOs</strong></p></li>
+<li><p>Don’t tell us == - ½ PTO on top of regular PTO deduction</p></li>
+<li><p>Attendance rules apply to mandatory meetups and external events you commit to</p></li>
+</ul>
+
+<h3>Examples</h3>
+
+<ul>
+<li><p>Late = &frac12; PTO</p></li>
+<li><p>Leaving early = &frac12; PTO</p></li>
+<li><p>Absent = 1 PTO</p></li>
+<li><p>Notify use of full PTO via Intranet = 1 PTO <em>but</em> track score bonus of 5%</p></li>
+<li><p>Notify use of half PTO via Intranet = &frac12; PTO <em>but</em> track score bonus of 2%</p></li>
+<li><p>Notify use of half PTO via Intranet but you don&rsquo;t show up by noon = PTO deduction and no bonus</p></li>
+</ul>
+
+<p><strong>In a nutshell &hellip;</strong></p>
+
+<ul>
+<li><p>&hellip; if you show up any moment after 9:00a (or the event&rsquo;s start time) or leave before the mandatory event has ended (for PLDs, this is 3p), you use &frac12; PTO.</p></li>
+<li><p>&hellip; if you arrive after noon (or leave with half the day left), you use a full PTO.</p></li>
+<li><p>&hellip; if you tell us in advance about either, you get a track score bonus.</p></li>
+</ul>
+
+<h2>+ or -</h2>
+
+<p>(<em>The Student Handbook provides detailed elaboration on school rules of respect towards ethics, others, and our space, so if you need a reminder please direct yourself to that before moving forward</em>)</p>
+
+<p>We deeply value that our community is one of mutual respect, inclusion, and social responsbility, and everyone needs to do their part to maintain this.</p>
+
+<p>If you disrespect others, the space, or standards of integrity, your score decreases. If you fulfill assigned responsibilities, it increases.</p>
+
+<p><strong>Examples of decrease</strong></p>
+
+<ul>
+<li><p>Cheating (can also be an immediate dismissal)</p></li>
+<li><p>Disrespecting staff or others (can be an immediate dismissal)</p></li>
+<li><p>Mistreating the space</p></li>
+<li><p>Not fulfilling officer, speaker of day, or event set up responsibilities</p></li>
+<li><p>Bailing on an event/meetup (internal or external) you committed to do</p></li>
+</ul>
+
+<p><strong>Examples of increase</strong></p>
+
+<ul>
+<li><p>Completing speaker of the day</p></li>
+<li><p>Successfully fulfilling officer of the week</p></li>
+<li><p>Assisting with an assigned responsibility</p></li>
+</ul>
+
+</div>
+
+
+
+  <form class="form-horizontal gap" id="edit_user_744" action="/users/agreed_code?code=PTO" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="67m35MMuh4042fIbr8/MAMTAO81kd8rFtY1iQAnNUx5wMyw3PJJh/7vKldW83LlpISz7W6MI/rE83+LK6MiELQ==" />
+    <div class="col-sm-10">
+        <input type="submit" name="commit" value="I agree" class="btn btn-primary" />
+    </div>
+</form>
+
+<br/>
+<br/>
+      </article>
+      
+      <div class="copyright">Copyright &copy; 2019 Holberton School. All rights reserved.</div>
+    </main>
+
+      <div id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <i class="fa fa-window-minimize" aria-hidden="true"></i>
+</div>
+      <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" 
+            type="text"
+            name="hbtn-search-bar"
+            placeholder="✨Start search by typing in this field✨"
+    />
+</div>
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+      <div class="modal fade" id="video_streams_current_modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Video streaming</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="streams list-group"></ul>
+                <div class="player">
+                    <div class="header">
+                        <div class="back"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                        <div class="title"></div>
+                    </div>
+                    <div id="video_streams_current_modal_player"></div>
+                </div>
+                <div class="spinner" >
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="error"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 
+            'UA-67152800-6', 
+            'auto', {
+              userId: '744'
+            }
+          );
+
+        ga('send', 'pageview');
+
+        $(document).ready(function() { 
+          ga(function(tracker) { 
+            var clientId = tracker.get('clientId'); 
+            $('.ga-client-id').val(clientId); 
+          }); 
+        });
+      </script>
+
+
+  </body>
+</html>

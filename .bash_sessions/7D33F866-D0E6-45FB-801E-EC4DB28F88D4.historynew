@@ -1,0 +1,17 @@
+mkdir depo
+cd depo
+echo "# depo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/drainer963/depo.git
+git push -u origin master
+echo "# depo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/drainer963/depo.git
+git push -u origin masterls
+ls
+cd depo
+git config --global user.email "744@holbertonschool.com" git config --global user.name "drainer963"
